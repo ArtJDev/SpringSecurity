@@ -25,10 +25,10 @@ public class SpringSecurityApplication implements CommandLineRunner {
     @Transactional
     public void run(String... args) throws Exception {
         List<Student> studentList = Arrays.asList(
-                new Student(1, "Владимир", "Анисимов", "Netology", "2021-09-29"),
-                new Student(2, "Алина", "Сазонова", "Netology", "2021-10-10"),
-                new Student(3, "Алексей", "Леонов", "Netology", "2021-10-15"),
-                new Student(4, "Олег", "Седов", "Netology", "2021-11-01")
+                new Student(1, "Владимир", "Анисимов", "Netology", "29.09.2021"),
+                new Student(2, "Алина", "Сазонова", "Netology", "07.10.2021"),
+                new Student(3, "Алексей", "Леонов", "Netology", "15.10.2021"),
+                new Student(4, "Олег", "Седов", "Netology", "03.11.2021")
         );
 
         studentList.forEach(student -> {

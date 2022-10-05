@@ -25,7 +25,7 @@ public class StudentController {
 		List<Student> students = studentService.getAll();
 		model.addAttribute("students", students);
 		
-		String username = "Kindson";
+		String username = "User";
 		model.addAttribute("username", username);
 		
 		return "students";

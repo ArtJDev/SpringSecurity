@@ -6,7 +6,7 @@
 <script type="text/javascript" src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../static/main.js" th:src="@{/main.js}"></script>
 <meta charset="UTF-8">
-<title>Student List</title>
+<title>Список студентов</title>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
       </li>
     </ul>
      <div style="color:#FFFFFF" class="nav-item active">
-	<h5>Welcome,  <span th:text="${username}">Welcome guest!</span></h5>
+	<h5>Welcome,  <span th:text="${username}">Добро пожаловать, гость</span></h5>
 	</div>
   </div>
 </nav>
@@ -48,31 +48,31 @@
 <div role="main" class="container">
 
   <div class="starter-template">
-<H2>List of Students </H2>
+<H2>Список студентов</H2>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add New</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Добавить нового</button>
 
 <table class="table table-stripped">
 <thead>
 <tr>
 <td>Id</td>
-<td>Name</td>
-<td>Department</td>
-<td>Updated By</td>
-<td>Updated On</td>
-<td>Edit</td>
-<td>Delete</td>
+<td>Имя</td>
+<td>Фамилия</td>
+<td>Кем обновлено</td>
+<td>Дата</td>
+<td>Редактировать</td>
+<td>Удалить</td>
 </tr>
 </thead>
 
 <tr th:each="student:${students}">
 <td th:text="${student.Id}">Id</td>
 <td th:text="${student.name}">Name</td>
-<td th:text="${student.department}">Department</td>
+<td th:text="${student.surname}">Фамилия</td>
 <td th:text="${student.updatedBy}">Updated By</td>
 <td th:text="${student.updatedOn}">Updated On</td>
-<td><a th:href="@{/students/getOne/(Id=${student.Id})}"  class="btn btn-warning">Edit</a></td>
-<td><a th:href="@{/students/delete/(Id=${student.Id})}"   class="btn btn-danger" id="deleteButton">Delete</a></td>
+<td><a th:href="@{/students/getOne/(Id=${student.Id})}"  class="btn btn-warning">Редактировать</a></td>
+<td><a th:href="@{/students/delete/(Id=${student.Id})}"   class="btn btn-danger" id="deleteButton">Удалить</a></td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New Student</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Новый студент</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -101,29 +101,29 @@
           </div>
 
           <div class="form-group">
-            <label for="two" class="col-form-label">Name:</label>
+            <label for="two" class="col-form-label">Имя:</label>
             <input type="text" class="form-control" id="two" name="name">
           </div>
           
           <div class="form-group">
-            <label for="three" class="col-form-label">Department:</label>
-            <input type="text" class="form-control" id="three" name="department">
+            <label for="three" class="col-form-label">Фамилия:</label>
+            <input type="text" class="form-control" id="three" name="surname">
           </div>
           
           <div class="fore">
-            <label for="recipient-name" class="col-form-label">Updated By:</label>
+            <label for="recipient-name" class="col-form-label">Кем обновлен:</label>
             <input type="text" class="form-control" id="fore" name="updatedBy">
           </div>    
                 
            <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Updated On:</label>
+            <label for="recipient-name" class="col-form-label">Дата:</label>
             <input type="text" class="form-control" id="recipient-name" name="updatedOn">
           </div>         
           
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
       </div>
     </div>
   </div>
@@ -150,29 +150,29 @@
           </div>
 
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Name:</label>
+            <label for="recipient-name" class="col-form-label">Имя:</label>
             <input type="text" class="form-control" id="nameEdit" name="name">
           </div>
           
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Department:</label>
-            <input type="text" class="form-control" id="departmentEdit" name="department">
+            <label for="recipient-name" class="col-form-label">Фамилия:</label>
+            <input type="text" class="form-control" id="surnameEdit" name="surname">
           </div>
           
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Updated By:</label>
+            <label for="recipient-name" class="col-form-label">Кем обновлено:</label>
             <input type="text" class="form-control" id="updatedByEdit" name="updatedBy">
           </div>    
                 
            <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Updated On:</label>
+            <label for="recipient-name" class="col-form-label">Дата:</label>
             <input type="text" class="form-control" id="updatedOnEdit" name="updatedOn">
           </div>         
           
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
       </div>
     </div>
   </div>
@@ -184,17 +184,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Confirm delete</h5>
+        <h5 class="modal-title">Подтвердите удаление</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Are you sure you want to delete this record?</p>
+        <p>Вы уверены, что хотите удалить эту запись?</p>
       </div>
       <div class="modal-footer">
-        <a href="" class="btn btn-primary" id="delRef">Yes, Delete</a>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="" class="btn btn-primary" id="delRef">Да, удалить</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
