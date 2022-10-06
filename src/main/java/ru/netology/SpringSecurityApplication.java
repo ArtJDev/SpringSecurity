@@ -28,7 +28,8 @@ public class SpringSecurityApplication implements CommandLineRunner {
                 new Student(1, "Владимир", "Анисимов", "Netology", "29.09.2021"),
                 new Student(2, "Алина", "Сазонова", "Netology", "07.10.2021"),
                 new Student(3, "Алексей", "Леонов", "Netology", "15.10.2021"),
-                new Student(4, "Олег", "Седов", "Netology", "03.11.2021")
+                new Student(4, "Олег", "Седов", "Netology", "18.10.2021"),
+                new Student(4, "Артём", "Куриленко", "Netology", "29.10.2021")
         );
 
         studentList.forEach(student -> {
