@@ -23,7 +23,7 @@ public class StudentController {
 		List<Student> students = studentService.getAll();
 		model.addAttribute("students", students);
 		
-		String username = "User";
+		String username = "Admin";
 		model.addAttribute("username", username);
 		
 		return "students";
