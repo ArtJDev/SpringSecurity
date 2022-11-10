@@ -13,7 +13,7 @@ $('document').ready(function() {
 		$.get(href, function(student, status){
 			$('#IdEdit').val(student.id);
 			$('#nameEdit').val(student.name);
-			$('#departmentEdit').val(student.department);
+			$('#surnameEdit').val(student.surname);
 			$('#updatedByEdit').val(student.updatedBy);
 			$('#updatedOnEdit').val(student.updatedOn.substr(0,10));
 		});	
